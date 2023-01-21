@@ -9,7 +9,7 @@ const newProductData = async (req, res) => {
         }
 
         const newProduct = await invoiceModel.create(req.body);
-        res.send({ status: true, msg: "Data Inserted Successfully", Data: newProduct });
+        res.status(201).send({ status: true, msg: "Data Inserted Successfully", Data: newProduct });
 
     } catch (err) {
         console.log("This is the error :", err.message)
